@@ -1,0 +1,67 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  width: 80%;
+}
+
+.column {
+  max-width: 24rem;
+  min-height: 40rem;
+  padding: 3.2rem;
+  color: white;
+}
+
+.ad-text,
+.learn-more-btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 6.4rem;
+}
+
+.heading {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.learn-more-btn {
+  padding: 1.2rem 2.4rem;
+  border: white;
+  border-radius: 3.2rem;
+  background: white;
+  outline: white solid 1.5px;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  padding: 1.2rem 2.4rem;
+  border: white;
+  border-radius: 3.2rem;
+  color: white;
+  background: none;
+  outline: white solid 1.5px;
+  margin-bottom: 1.8rem;
+}
