@@ -4,12 +4,16 @@ html {
 
 body {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
   margin: auto;
   display: flex;
-  width: 80%;
 }
 
 .column {
@@ -36,14 +40,30 @@ body {
 
 .sedans {
   background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+}
+
+.sedans .learn-more-btn {
+  color: hsl(31, 77%, 52%);
 }
 
 .suvs {
   background-color: hsl(184, 100%, 22%);
 }
 
+.suvs .learn-more-btn {
+  color: hsl(184, 100%, 22%);
+}
+
 .luxury {
   background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+
+.luxury .learn-more-btn {
+  color: hsl(179, 100%, 13%);
 }
 
 .learn-more-btn {
@@ -54,6 +74,7 @@ body {
   outline: white solid 1.5px;
   margin-bottom: 1.8rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .learn-more-btn:hover {
@@ -64,4 +85,72 @@ body {
   background: none;
   outline: white solid 1.5px;
   margin-bottom: 1.8rem;
+}
+
+/********************************/
+/* BELOW 1200px (Landscape Tablets )*/
+/********************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px divided by 16px */
+    font-size: 56.25%;
+  }
+}
+
+/********************************/
+/* BELOW 944px (Tablets )*/
+/********************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px/16px=50% */
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 3.2rem;
+  }
+
+  .column {
+    max-width: 18rem;
+    min-height: 24rem;
+    padding: 2.4rem;
+    color: white;
+  }
+}
+
+/********************************/
+/* BELOW 544px (Phones) */
+/********************************/
+
+@media (max-width: 34em) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    max-width: 18rem;
+    min-height: 18rem;
+    padding: 2.4rem;
+  }
+
+  .ad-text,
+  .learn-more-btn {
+    margin-bottom: 3.2;
+  }
+
+  .sedans {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+  }
+
+  .luxury {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
 }
